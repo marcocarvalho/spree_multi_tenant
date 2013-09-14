@@ -5,19 +5,19 @@ group :test do
 end
 
 group :assets do
-  gem 'sass-rails', "~> 3.2"
-  gem 'coffee-rails', "~> 3.2"
+  gem 'sass-rails', "~> 4.0"
+  gem 'coffee-rails', "~> 4.0"
   gem 'therubyracer'
 end
 
-if RUBY_VERSION < "1.9"
-  gem "ruby-debug"
-else
-  gem "ruby-debug19"
-end
+#if RUBY_VERSION < "1.9"
+#  gem "ruby-debug"
+#else
+#  gem "ruby-debug19"
+#end
 
-gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '2-0-stable'
-gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
+gem 'spree', '2.1.0.beta', :github => 'spree/spree'
+gem 'spree_auth_devise', '2.1.0', :github => 'spree/spree_auth_devise'
 
 gemspec
 
